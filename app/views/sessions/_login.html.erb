@@ -1,0 +1,7 @@
+  <h3>Log in</h3>
+  <%= form_tag(:action => 'login_attempt', :controller => 'sessions',:remote => true) do %>
+    <p>Username or Email:</br> <%= text_field_tag(:username_or_email) %></p> 
+    <p>Password:</br> <%= password_field_tag :login_password %></p> 
+    <p><a href = "/sessions/passreset">Forgot your password?</a></p>
+    <%= submit_tag("Log In") %>
+  <% end %>

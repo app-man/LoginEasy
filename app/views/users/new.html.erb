@@ -1,0 +1,72 @@
+<% @page_title = "Login Easy | Signup" %>
+<%= form_for(:user, :url => {:controller => 'users', :action => 'create'}, :html => { :multipart => true }) do |f| %>
+<div class="modal">
+<% if params[:error_message].present? %>
+        <div class="alert alert-error alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span><span class="sr-only">close</span></button>
+            <%= params[:error_message] %>
+        </div>
+<% end %>
+    <div class="modal-header">
+        <h3>Sign Up <span class="extra-title muted"></span></h3>
+    </div>    
+    <div class="modal-body form-horizontal">    
+        <div class="control-group">
+            <label for="first_name_label" class="control-label">Full Name</label>
+            <div class="controls">            
+                <%= f.text_field :first_name %>
+            </div>            
+        </div>
+        <div class="control-group">
+            <label for="address_label" class="control-label">Address</label>
+            <div class="controls">            
+                <%= f.text_area :useraddress %>
+            </div>            
+        </div>
+        <div class="control-group">
+            <label for="username" class="control-label">Username</label>
+            <div class="controls">
+                <%= f.text_field :username%>
+            </div>
+        </div>
+        <div class="control-group">
+            <label for="username" class="control-label">Email</label>
+            <div class="controls">
+                <%= f.text_field :email%>
+            </div>
+        </div>
+        <div class="control-group">
+            <label for="new_password" class="control-label">New Password</label>
+            <div class="controls">
+                <%= f.password_field :password%>
+            </div>
+        </div>        
+        <div class="control-group">
+            <label for="new_password" class="control-label">Password Confirmation</label>
+            <div class="controls">
+                <%= f.password_field :password_confirmation%>
+            </div>
+        </div>        
+        <% if @isUserLoggedIn %>
+            <div class="control-group">
+                <label for="old_password" class="control-label">Old Password</label>
+                <div class="controls">
+                    <%= f.password_field :password_old%>
+                </div>
+            </div>               
+        <% end %> 
+        <div class="control-group">
+            <label for="photo_label" class="control-label">Photo</label>
+            <div class="controls">            
+                <%= f.file_field :photo %>
+            </div>            
+        </div>
+    </div>
+    <div class="modal-footer">
+        <!-- <button class="btn btn-facebook"><i class="fa fa-facebook"></i> | Connect with Facebook</button> -->
+        <%= submit_tag "Close", :name => 'cancel_button' ,:class => 'btn' %>    
+        <%= submit_tag "Sign Up", :name => 'submit_button' ,:class => 'btn btn-primary' %>
+    </div>
+</div>
+<% end %>

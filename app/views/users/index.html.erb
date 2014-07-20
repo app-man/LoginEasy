@@ -1,0 +1,18 @@
+<h1>Listing Users</h1>
+
+
+<form class="form-search">
+  <div class="col-sm-3 col-md-3 pull-right input-append" style="padding-top: 5px;">
+    <input class="search-query span2"  name="search_query_user" type="text" placeholder="Search user" >
+    <button type="submit" class="btn"><i class="icon-search"></i></button>
+  </div>
+</form>
+<div id="users">
+  <table class="table table-striped">
+    <tr>
+      <th>User Name</th>
+      <th>Email</th>
+    </tr>
+    <%= render "index" %>   
+  </table>  
+</div>

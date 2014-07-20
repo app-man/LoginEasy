@@ -1,0 +1,21 @@
+<% if params[:error_message].present? %>
+        <div class="alert alert-error alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span><span class="sr-only">close</span></button>
+            <strong>Error!</strong><%= params[:error_message] %>
+        </div>
+<% end %>
+<% if params[:success_message].present? %>
+        <div class="alert alert-success alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert">
+            <span aria-hidden="true">&times;</span><span class="sr-only">close</span></button>
+            <%= params[:success_message] %>
+        </div>
+<% end %>
+
+<div class="span6">
+  <div class="container">
+    <h1 class="page-header">Welcome to Login Easy</h1>
+    <p class="lead span6">Login Easy is a one-stop-shop for all your login needs..........</p>
+  </div>
+</div>
