@@ -1,4 +1,4 @@
 LoginEasy
 =========
 
-A simple rauby on rails Login / Session controller implementation with twitter bootstrap UI.
+A simple ruby on rails Login / Session controller implementation with twitter bootstrap UI.
