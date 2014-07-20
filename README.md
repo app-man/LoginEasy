@@ -2,7 +2,7 @@ LoginEasy
 =========
 
 
-LoginEasy is a simple web solution to create login and session controller for your projects. LoginEasy is implemented using ruby on rails 4 and provides user login, signup and session management for your web app.
+LoginEasy is a simple web solution to create login and session controller for your projects. LoginEasy is implemented using ruby on rails 4 and provides user login, signup and session management for your web app. Please find the demo at http://shopeasyse.herokuapp.com/
 
 Clone to the repo LoginEasy by either typing from the terminal 
 
